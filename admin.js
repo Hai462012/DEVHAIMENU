@@ -45,4 +45,26 @@ function render(){
   });
 }
 
+function createKey(){
+  let key = document.getElementById("keyName").value;
+  let days = document.getElementById("days").value;
+  let maxDevices = document.getElementById("maxDevices").value;
+
+  let expire = new Date();
+  expire.setDate(expire.getDate() + parseInt(days));
+
+  let data = JSON.parse(localStorage.getItem("keys") || "[]");
+
+  data.push({
+    key: key,
+    expire: expire,
+    maxDevices: parseInt(maxDevices),
+    devices: []
+  });
+
+  localStorage.setItem("keys", JSON.stringify(data));
+
+  render();
+}
+
 render();
