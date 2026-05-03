@@ -2,12 +2,19 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>MENU PRO</title>
+<title>MENU VIP</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="menu">
+<div class="menu" id="loginBox">
+  <h2>🔑 NHẬP KEY</h2>
+  <input id="keyInput" placeholder="Nhập key..."><br><br>
+  <button onclick="checkKey()">Kích hoạt</button>
+  <p id="msg"></p>
+</div>
+
+<div class="menu" id="mainMenu" style="display:none;">
   <h2>⚡ MENU VIP</h2>
 
   <div class="grid">
