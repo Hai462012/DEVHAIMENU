@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ADMIN</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<div class="menu">
+  <h2>ADMIN LOGIN</h2>
+  <input id="u" placeholder="user">
+  <input id="p" placeholder="pass">
+  <button onclick="login()">Login</button>
+</div>
+
+<div class="menu" id="panel" style="display:none;">
+  <h2>QUẢN LÝ KEY</h2>
+
+  <input id="key" placeholder="key">
+  <input id="days" placeholder="ngày">
+  <input id="max" placeholder="thiết bị">
+  <button onclick="createKey()">Tạo</button>
+
+  <ul id="list"></ul>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>
