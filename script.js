@@ -23,10 +23,12 @@ function checkKey(){
   let now = new Date();
   let expire = new Date(keyObj.expire);
 
-  if(now > expire){
-    msg.innerText = "⛔ Key đã hết hạn";
-    return;
-  }
+let now = Date.now();
+
+if(now > keyObj.expire){
+  msg.innerText = "⛔ Key đã hết hạn";
+  return;
+}
 
   let deviceId = getDeviceId();
 
