@@ -24,7 +24,7 @@ function createKey(){
 
   data.push({
     key: key,
-    expire: expire.toLocaleDateString()
+    expire: expire.getTime()
   });
 
   localStorage.setItem("keys", JSON.stringify(data));
